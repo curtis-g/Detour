@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Detour</title>
+		<meta name="generator" content="Bootply Bootstrap Template" />
+    <meta name="author" content="Curtis Griffiths">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+	<body>
+<!-- Wrap all page content here -->
+<div id="wrap">
+  
+<header class="masthead">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1><a href="#" title="Detour">Detour</a></h1>
+          <p class="lead">An Interesting Route Finder </p>
+      </div>
+    </div>
+    </div>
+</header>
+  
+  
+<!-- Fixed navbar -->
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a href="#">Home</a></li>
+          <li><a href="#section1">About</a></li>
+          <li><a href="#section5"><strong>Route Finder</strong></a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li class="dropdown">
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+</div><!--/.navbar -->
+  
+<!-- Begin page content -->
+<div class="divider" id="section1"></div>
+  
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="page-header text-center">
+      <h1>About Detour</h1>
+    </div>
+    
+    <p class="lead text-center">
+      Innovative Route Finder
+    </p>
+    <p class="text-center">
+      This website is designed to make travelling more interesting. Not only functioning as a route finder but finding interesting stops along the way to the destination. Creating fun and eventful trips out of long journeys.
+    </p>
+  </div>
+</div>
+  
+
+<div class="divider" id="section5"></div>
+
+  <h1 class="text-center">Start your Journey!</h1>
+
+  <div id="map-canvas"></div>
+  
+  <hr>
+  
+  <div class="w3-card-4" style="width:85%; margin: 0 auto 0 auto; padding-bottom:10px; ">
+
+  <div class="w3-container w3-grey">
+
+  <div id="side_bar" style="display:none"></div>
+
+    <h3>Start your Journey!</h3>
+</div>
+
+  <form class="w3-container">
+
+    <label>Start Point</label>
+    <input class="w3-input" type="text" id="start">
+
+    <label>Destination</label>
+    <input class="w3-input" type="text" id="destination">
+    <label>Type of Travel</label>
+    <select class="w3-input" id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="TRANSIT">Public Transport</option>
+    </select> 
+
+    <label> Types of Places</label>
+    <link href="css/styles.css" rel="stylesheet">
+    <input type="checkbox" id="cb1" name="cbox" value="park, campground" class="places"/>
+    <label for="cb1"><img src="../img/icons/flower-silhouette.png" alt="Parks"/>Parks</label>
+    <input type="checkbox" id="cb2" name="cbox" value="lodging, campground" class="places"/>
+    <label for="cb2"><img src="../img/icons/sleeping-bed-silhouette.png" alt="Lodging"/>Lodging</label>
+    <input type="checkbox" id="cb3" name="cbox" value="restaurant, bakery, cafe, meal_delivery, meal_takeaway" class="places"/>
+    <label for="cb3"><img src="../img/icons/knife-and-fork-silhouette.png" alt="Food"/>Food</label>
+    <input type="checkbox" id="cb4" name="cbox" value="art_gallery, church, cemetery, city_hall, library, museum" class="places" />
+    <label for="cb4"><img src="../img/icons/maps-mark.png" alt="Cultural"/>Cultural</label>
+    <input type="checkbox" id="cb5" name="cbox" value="bar, casino, night_club" class="places" />
+    <label for="cb5"><img src="../img/icons/wine-glasses.png" alt="Night Life"/>Night Life</label>
+    <input type="checkbox" id="cb6" name="cbox" value="amusement_park, aquarium, art_gallery, bowling_alley, casino, library, movie_theater, museum, stadium, zoo" class="places" />
+    <label for="cb6"><img src="../img/icons/bowling-silhouette.png" alt="Attraction"/>Attractions</label>
+    <br>
+    <label>Distance from Route</label> 
+    <input class ="w3-input" id ="slider" type="range" min="0.5" max="20" value="0.5" step="0.5" style ="width:90%; margin:0 auto 0 auto; display:pointer;" onChange="sliderChange(this.value)"> <span id="sliderStatus"></span>
+    <input id="reRoute" type="button" onclick="route();" style ="visibility: hidden;" value="Re-Route" />   
+
+</form>
+  </div>
+<br>
+
+<div class="container">
+  	<div class="col-sm-8 col-sm-offset-2 text-center">
+      <h2>Contact</h2>
+      
+      <hr>
+      <h4>
+        Please contact with any enquiries or concerns
+      </h4>
+      <hr>
+      <ul class="list-inline center-block">
+        <li><a href="mailto:griffiths0122@gmail.com"><img src="../img/gmail.png" alt="G Mail" style="height:30px; width:40px;"></a></li>
+        <li><a href="http://facebook.com"> <img src="../img/facebook.png" alt="Facebook" style="height:55px; width:55px;"></a></li>
+      </ul>
+      
+  	</div><!--/col-->
+</div><!--/container-->
+  
+</div><!--/wrap-->
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">This website is in partial fulfilment of my Computer Science degree at <a href="http://aber.ac.uk">Aberystwyth University</a></p>
+  </div>
+</div>
+
+	<!-- script references -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtEnmfcnJReViJZbtCJOZaAXD11DMdvwA&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script> 
+    <script src="js/scripts.js"></script> 
+    <script src="/js/RouteBoxer.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+	</body>
+</html>
